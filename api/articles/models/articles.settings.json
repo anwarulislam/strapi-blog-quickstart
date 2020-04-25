@@ -1,0 +1,25 @@
+{
+  "kind": "collectionType",
+  "collectionName": "articles",
+  "info": {
+    "name": "Articles"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true,
+      "maxLength": 300
+    },
+    "details": {
+      "type": "richtext"
+    },
+    "categories": {
+      "via": "articles",
+      "collection": "categories"
+    }
+  }
+}
